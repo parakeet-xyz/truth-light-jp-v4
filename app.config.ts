@@ -1,8 +1,9 @@
 export default defineAppConfig({
   truthlight: {
     site: {
-      name: 'Truth Light | ハームリダクション＆リカバリー',
-      description: 'Truth Lightは「日本版Erowid」を目指し、薬物に対する正しい情報と回復の道を提供します。',
+      name: 'Truth Light',
+      topPageName: 'Truth Light | 薬物依存症のハームリダクションと回復支援サイト',
+      topPageDescription: 'Truth Lightは「日本版Erowid」を目指し、薬物とその依存症に対する正しい情報と回復の道を提供します。',
       ogImage: '/og-default.png'
     },
     theme: {
@@ -72,7 +73,7 @@ export default defineAppConfig({
       padded: true
     },
     footer: {
-      credits: 'Copyright © 2025 Truth Light. All rights reserved.',
+      credits: 'Copyright © 2025-2026 Truth Light. All rights reserved.',
       links: [{
         title: 'Truth Light JP',
         icon: './icon/X/x-logo-black.png',

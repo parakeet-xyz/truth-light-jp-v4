@@ -252,12 +252,20 @@
 </template>
 
 <script setup lang="ts">
+import { title } from 'node:process';
 import ContentKetcherFrame from '~/components/content/KetcherFrame.vue'
+
 definePageMeta({
   layout: "substances",
 })
 
 const appConfig = useAppConfig();
+
+useSeoMeta({
+  title: `NPSデータベース(α版)`,
+  description: `現在日本で規制されている薬物やNPS(新規精神活性物質)のデータベース`,
+  ogDescription: `現在日本で規制されている薬物やNPS(新規精神活性物質)のデータベース`,
+})
 const categoryList =appConfig.truthlight?.categories ?? [];
 
 // ✅ ここが“500避け”のキモ：存在するJSONをglobで全部拾う

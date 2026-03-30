@@ -1,3 +1,9 @@
+<template>
+  <main class="prose">
+    <ContentRenderer v-if="page" :value="page" />
+  </main>
+</template>
+
 <script setup lang="ts">
 import { withoutTrailingSlash } from 'ufo'
 
@@ -27,9 +33,3 @@ useHead({
   link: () => page.value?.seo?.link ?? [],
 })
 </script>
-
-<template>
-  <main class="prose">
-    <ContentRenderer v-if="page" :value="page" />
-  </main>
-</template>

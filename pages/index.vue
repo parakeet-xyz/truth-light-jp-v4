@@ -50,12 +50,11 @@ import ContentKetcherFrame from '~/components/content/KetcherFrame.vue'
 definePageMeta({ layout: "default" })
 
 const appConfig = useAppConfig()
-useHead({
-  titleTemplate: null,
-})
+const topPageDescription = appConfig.truthlight?.site?.topPageDescription ?? ``
+
 useSeoMeta({
-  title: appConfig.truthlight?.site?.name ?? `Truth Light`,
-  description: appConfig.truthlight?.site?.description ?? ``,
+  description: topPageDescription,
+  ogDescription: topPageDescription,
 })
 
 // Tabs

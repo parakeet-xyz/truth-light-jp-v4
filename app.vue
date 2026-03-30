@@ -1,12 +1,3 @@
-<script setup lang="ts">
-  useHead({
-    link: [
-      { rel: `preconnect`, href: `https://fonts.googleapis.com`},
-      { rel: `preconnect`, href: `https://fonts.gstatic.com`, crossorigin:`anonymous`},
-      { rel: `stylesheet`, href: `https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Outfit:wght@100..900&display=swap`}
-    ],
-  })
-</script>
 <template>
   <div class="bg-[#EAEFEF] text-[#25343F] custom-font-normal">
     <NuxtLayout>
@@ -14,3 +5,20 @@
     </NuxtLayout>
   </div>
 </template>
+
+<script setup lang="ts">
+const appConfig = useAppConfig()
+const siteName = appConfig.truthlight?.site?.name ?? ``
+const topPageName = appConfig.truthlight?.site?.topPageName ?? ``
+
+useHead({
+  titleTemplate: (titleChunk) => {
+    return titleChunk ? `${titleChunk} | ${siteName}` : topPageName
+  },
+  link: [
+    { rel: `preconnect`, href: `https://fonts.googleapis.com`},
+    { rel: `preconnect`, href: `https://fonts.gstatic.com`, crossorigin:`anonymous`},
+    { rel: `stylesheet`, href: `https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Outfit:wght@100..900&display=swap`}
+  ],
+})
+</script>
