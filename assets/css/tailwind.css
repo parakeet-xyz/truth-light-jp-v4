@@ -24,3 +24,12 @@ html, body, #__nuxt { height: 100%; }
   font-weight: 600;
   font-style: normal;
 }
+
+/* Nuxt Content Markdown */
+#__nuxtContent a {
+  color: #25343F;
+  text-decoration-line: underline;
+}
+#__nuxtContent a:hover {
+  color: #FF9B51;
+}
