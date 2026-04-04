@@ -2,7 +2,7 @@
   <main
     id="__nuxtContent"
   >
-    <div class="w-[100%] h-[250px] bg-[#25343F] bg-[url('/bg/docs-basics-bg-01.png')] bg-[length:100%_auto] bg-center bg-no-repeat">
+    <div class="mb-12 w-[100%] h-[250px] bg-[#25343F] bg-[url('/bg/docs-basics-bg-01.png')] bg-[length:100%_auto] bg-center bg-no-repeat">
       <div class="flex flex-col item-center justify-center mx-auto max-w-6xl h-[100%]">
         <h1 class="custom-font-bold text-4xl tracking-wider text-[#EAEFEF] text-center">
           {{ page?.title ?? '' }}
@@ -18,7 +18,7 @@
       <aside
         v-if="page?.body?.toc?.links?.length"
         class="w-full mx-6
-        md:w-1/4"
+        md:sticky md:w-1/4"
         aria-label="Table of contents"
       >
         <nav class="rounded-lg border p-4">
