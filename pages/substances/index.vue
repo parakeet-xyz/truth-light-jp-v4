@@ -4,9 +4,9 @@ import ContentSubstancesTable from '~/components/content/SubstancesTable.client.
 definePageMeta({ layout: "substances" })
 
 useSeoMeta({
-  title: `NPSデータベース(α版)`,
-  description: `現在日本で規制されている薬物やNPS(新規精神活性物質)のデータベース`,
-  ogDescription: `現在日本で規制されている薬物やNPS(新規精神活性物質)のデータベース`,
+  title: `規制物質データベース`,
+  description: `現在日本で覚醒剤取締法・麻薬及び向精神薬取締法・薬機法における指定薬物のデータベース`,
+  ogDescription: `現在日本で覚醒剤取締法・麻薬及び向精神薬取締法・薬機法における指定薬物のデータベース`,
 })
 
 </script>
@@ -15,7 +15,7 @@ useSeoMeta({
   <ClientOnly>
     <ContentSubstancesTable />
     <template #fallback>
-      <div class="text-base text-center pt-12">Loading…</div>
+      <div class="text-base text-center mt-16">Loading…</div>
     </template>
   </ClientOnly>
 </template>
